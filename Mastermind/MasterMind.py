@@ -14,6 +14,7 @@ def gokker():
     code.append(n2)
     code.append(n3)
     code.append(n4)
+    print(code)
 
     while True:
         print('====================================')
@@ -73,14 +74,17 @@ def regels():
 def gamemaster():
     code = []
     while len(code) < 4:
-        secret = int(input("Geef een getal 0 en 6: "))
+        secret = int(input("Geef een getal tussen 0 en 6: "))
         if secret > 6:
-            print("Getal moet onder de 7 zijn.")
+            print("Ik zei tussen 0 en 6.")
+        elif secret < 1:
+            print('Ik zei tussen 0 en 6.')
         elif secret <= 6:
             code.append(secret)
-    print("Jouw geheime code is", code)
+    print("Uw geheime code is", code)
     time.sleep(1)
-    print("De computer gaat nu beginnen met raden")
+    print("De computer gaat een poginkje wagen.")
+    print('====================================')
     time.sleep(2)
 
     # Algoritme 1 begin

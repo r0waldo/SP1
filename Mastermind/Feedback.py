@@ -1,6 +1,7 @@
 def feedback(gok, code):
     wit = witP(gok, code)
     zwart = zwartP(gok, code)
+    wit = wit - zwart
     return zwart, wit
 
 def witP(gok, code):
