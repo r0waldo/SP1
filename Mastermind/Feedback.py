@@ -1,9 +1,11 @@
+# Functie feedback is de functie zwartP en witP bij elkaar om de juiste feedback te geven.
 def feedback(gok, code):
     wit = witP(gok, code)
     zwart = zwartP(gok, code)
     wit = wit - zwart
     return zwart, wit
 
+# Functie voor de witte pin. Toont aan hoeveel cijfers er in de secret code voorkomen.
 def witP(gok, code):
     wit = 0
     wit_list = code[:]
@@ -13,6 +15,7 @@ def witP(gok, code):
             wit = wit + 1
     return wit
 
+# Functie zwartP is voor de zwarte pinnen. Die toont aan hoeveel cijfers er op de juiste positie staan.
 def zwartP(gok, code):
     zwart = 0
     zwart_list = code[:]
